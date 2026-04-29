@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPS - Customer Reviews</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html">CPS</a></div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            <label for="menu-toggle" class="mobile-menu-btn">☰</label>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="product-details.html">Product Details</a></li>
+                <li><a href="cart.html">Cart</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+                <li><a href="review.html" class="active">Reviews</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Customer Reviews</h2>
+                
+                <div class="review-list">
+                    <div class="review-card">
+                        <div class="review-header">
+                            <strong>John D.</strong>
+                            <span class="review-rating">★★★★★</span>
+                        </div>
+                        <p class="review-text">"Excellent quality tent! Survived a heavy storm. Highly recommend!"</p>
+                        <small>March 15, 2025</small>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <strong>Sarah M.</strong>
+                            <span class="review-rating">★★★★☆</span>
+                        </div>
+                        <p class="review-text">"Great sleeping bag, very warm. Delivery was fast."</p>
+                        <small>March 10, 2025</small>
+                    </div>
+                    
+                    <div class="review-card">
+                        <div class="review-header">
+                            <strong>Mike T.</strong>
+                            <span class="review-rating">★★★★★</span>
+                        </div>
+                        <p class="review-text">"Best camping gear in Yangon! Will buy again."</p>
+                        <small>March 5, 2025</small>
+                    </div>
+                </div>
+
+                <div class="review-form-container">
+                    <h3>Write a Review</h3>
+                    <form id="reviewForm" action="#" method="get">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Rating</label>
+                            <select required>
+                                <option value="" disabled selected>Select a rating</option>
+                                <option value="5">★★★★★ (5)</option>
+                                <option value="4">★★★★☆ (4)</option>
+                                <option value="3">★★★☆☆ (3)</option>
+                                <option value="2">★★☆☆☆ (2)</option>
+                                <option value="1">★☆☆☆☆ (1)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Your Review</label>
+                            <textarea rows="3" required placeholder="Share your camping experience..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-info"><h4>Camping Products Sales (CPS)</h4><p>📍 Yangon, Myanmar | 📞 +95 9 123 456 789</p></div>
+            <div class="footer-bottom"><p>&copy; 2025 Camping Products Sales</p></div>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,618 @@
+/* ========================================
+   CSS VARIABLES (Color Palette)
+   ======================================== */
+:root {
+    --forest-green: #3f5e4f;
+    --olive-drab: #6b7f6f;
+    --moss-green: #9cab94;
+    --cypress: #5a6d5f;
+    --lichen: #d6d6b8;
+    --background: #f5f7f2;
+    --text-dark: #2e2e2e;
+    --white: #ffffff;
+    --shadow: 0 2px 10px rgba(0,0,0,0.08);
+    --shadow-hover: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* ========================================
+   RESET & BASE STYLES
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', 'Times New Roman', serif;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ========================================
+   BUTTONS
+   ======================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--forest-green);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--cypress);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.btn-secondary {
+    background-color: var(--lichen);
+    color: var(--text-dark);
+}
+
+.btn-secondary:hover {
+    background-color: var(--moss-green);
+    color: white;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    margin: 5px;
+}
+
+/* ========================================
+   NAVIGATION BAR (Pure CSS Hamburger)
+   ======================================== */
+.navbar {
+    background-color: var(--white);
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 20px;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+    color: var(--forest-green);
+    text-decoration: none;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    transition: color 0.3s;
+    padding: 5px 0;
+}
+
+.nav-menu li a:hover,
+.nav-menu li a.active {
+    color: var(--forest-green);
+    border-bottom: 2px solid var(--forest-green);
+}
+
+/* Mobile menu - pure CSS checkbox hack */
+.menu-toggle {
+    display: none;
+}
+
+.mobile-menu-btn {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--forest-green);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url("../campingbackground.avif");
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ========================================
+   PRODUCT GRID
+   ======================================== */
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: var(--forest-green);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+    font-size: 4rem;
+    margin-bottom: 15px;
+}
+
+.product-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    color: var(--forest-green);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.product-desc {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* ========================================
+   PRODUCT DETAIL PAGE
+   ======================================== */
+.product-detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.product-detail-image {
+    font-size: 8rem;
+    text-align: center;
+    /* background: var(--lichen); */
+    border-radius: 12px;
+    padding: 40px;
+}
+
+.product-price-large {
+    font-size: 2rem;
+    color: var(--forest-green);
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.product-detail-info ul {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+.product-detail-info li {
+    margin: 10px 0;
+}
+
+/* ========================================
+   CART PAGE
+   ======================================== */
+.cart-items {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.cart-item {
+    display: grid;
+    grid-template-columns: auto 2fr auto auto auto;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-image {
+    font-size: 2rem;
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qty-btn {
+    background: var(--lichen);
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.remove-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.cart-total {
+    text-align: right;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.cart-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* ========================================
+   CHECKOUT PAGE
+   ======================================== */
+.checkout-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.checkout-form-container, .checkout-summary {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.checkout-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.checkout-item.total {
+    font-size: 1.2rem;
+    padding-top: 15px;
+    border-top: 2px solid var(--forest-green);
+}
+
+/* ========================================
+   REVIEWS PAGE
+   ======================================== */
+.review-list {
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.review-rating {
+    color: #ffc107;
+}
+
+.review-form-container {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: var(--shadow);
+}
+
+/* ========================================
+   ABOUT PAGE
+   ======================================== */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.about-info, .contact-form {
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: var(--shadow);
+}
+
+.about-info h3 {
+    margin-top: 20px;
+    color: var(--forest-green);
+}
+
+/* ========================================
+   AUTH PAGES
+   ======================================== */
+.auth-wrapper {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.auth-form {
+    background: white;
+    border-radius: 12px;
+    padding: 35px;
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+}
+
+.auth-switch {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.auth-switch a {
+    color: var(--forest-green);
+    text-decoration: none;
+}
+
+/* ========================================
+   PROMO SECTION
+   ======================================== */
+/* .promo-section {
+    background: var(--lichen);
+    padding: 60px 0;
+    margin: 20px 0;
+} */
+
+.promo-section {
+    background: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+        url("../salebackground02.webp"); /* adjust path + filename */
+    background-size: cover;       /* make sure it fills the section */
+    background-position: center;  /* center the image */
+    padding: 60px 0;
+    margin: 20px 0;
+    color: white;                 /* ensure text is readable */
+}
+
+.promo-banner {
+    text-align: center;
+}
+
+.promo-banner h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+    background: var(--cypress);
+    color: white;
+    margin-top: 60px;
+    padding: 40px 0 20px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 30px;
+}
+
+.footer-info h4, .footer-links h4 {
+    color: var(--lichen);
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+@media (max-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .product-detail {
+        grid-template-columns: 1fr;
+    }
+    
+    .checkout-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: var(--shadow);
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero {
+        height: 350px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .cart-item {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .cart-item-quantity {
+        justify-content: center;
+    }
+    
+    .cart-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
